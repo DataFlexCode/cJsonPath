@@ -20,6 +20,7 @@ cJsonPath.pkg
    To return a value at a path:
        
        Get ValueAtPath of oJsonPathObject hoSourceJsonObject path to sVar
+       
      Or
        
        Move (ValueAtPath(oJsonPathObject, hoSourceJson, path)) to sVar
@@ -56,7 +57,7 @@ in square brackets: "foo.bar.baz[0].bill[1][0]"
     	}
     }
 
- Examples:
+ Examples (where the cJsonPath object is called oJPath):
     
     Move (JsonAtPath(oJPath, hoJson, "foo.bar.baz[5][3].Mork[0][4][3]")) to hoObj
 
