@@ -71,4 +71,4 @@ in square brackets: "foo.bar.baz[0].bill[1][0]"
  NOTE: JSON is case-sensitive, so your path-strings must exactly match the
        object names ("foo" is *not* "Foo") in the JSON file.
 
-Also added the function CountAtPath to return the count od array members.
+Also added the function CountAtPath to return the count of array members.
