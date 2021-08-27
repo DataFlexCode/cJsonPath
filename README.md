@@ -10,13 +10,18 @@ cJsonPath.pkg
 
  Usage:
    To return a JSON object at a path:
+       
        Get JsonAtPath of oJsonPathObject hoSourceJsonObject, path to hoVar
+     
      Or:
+       
        Move (JsonAtPath(oJsonPathObject, hoSourceJsonObject, path)) to hoVar
 
    To return a value at a path:
+       
        Get ValueAtPath of oJsonPathObject hoSourceJsonObject path to sVar
      Or
+       
        Move (ValueAtPath(oJsonPathObject, hoSourceJson, path)) to sVar
 
 Path notation:
