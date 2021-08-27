@@ -21,10 +21,10 @@ cJsonPath.pkg
 
 Path notation:
 
-    A string with JSON object names, separated by dots "." and array indices
-    in square brackets: "foo.bar.baz[0].bill[1][0]"
+A string with JSON object names, separated by dots "." and array indices
+in square brackets: "foo.bar.baz[0].bill[1][0]"
 
- Sample JSON:
+ Sample JSON (in object hoJson):
 
     {
     	"foo": {
