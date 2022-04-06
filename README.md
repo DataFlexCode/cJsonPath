@@ -72,3 +72,8 @@ in square brackets: "foo.bar.baz[0].bill[1][0]"
        object names ("foo" is *not* "Foo") in the JSON file.
 
 Also added the function CountAtPath to return the count of array members.
+
+2022-04-06: Added JsonPath.pkg, which just uses the cJsonPath class, creates
+an object of that class, then adds three global functions: JsonObjectAtPath,
+JsonValueAtPath and JsonCountAtPath to call the methods of it.  You can just
+Use JsonPath.pkg then call those global functions.
