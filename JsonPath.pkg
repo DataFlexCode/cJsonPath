@@ -39,7 +39,7 @@ Function JsonObjectAtPath Global Handle hoJson String sPath Returns Handle
     Function_Return (JsonAtPath(oJsonPathObject, hoJson, sPath))
 End_Function
 
-Function JsonValueAtPath Global Handle hoJson String sPath Returns Integer
+Function JsonValueAtPath Global Handle hoJson String sPath Returns String
     Function_Return (ValueAtPath(oJsonPathObject, hoJson, sPath))
 End_Function
 
