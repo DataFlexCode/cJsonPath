@@ -88,6 +88,11 @@
 //==============================================================================
 // Added CountAtPath function to return the count of elements in an array at the
 // passed path.
+//
+// 2024-05-08 - MJP - Added test to see if we were passed a JSON array rather
+//                    than an object and if so call ArrayHandle rather than
+//                    ObjectHandle, so should now cope with arrays as the top
+//                    level "object".
 //==============================================================================
 //
 
@@ -210,7 +215,13 @@ Class cJsonPath is a cObject
         Get StringifyUtf8 of hoJson to ucaJson
         Get CreateNamed (RefClass(cJsonObject)) "CopyJson" to hoObj
         Get ParseUtf8 of hoObj ucaJson to bOK
-        Function_Return (ObjectHandle(Self, hoObj, sPath))
+        
+        If (JsonType(hoObj) = jsonTypeArray) ;
+            Function_Return (ArrayHandle(Self, hoObj, sPath))
+        Else If (JsonType(hoObj) = jsonTypeObject) ;
+            Function_Return (ObjectHandle(Self, hoObj, sPath))
+        Else ;
+            Function_Return 0
     End_Function
     
     Function ValueAtPath Handle hoJson String sPath Returns String
